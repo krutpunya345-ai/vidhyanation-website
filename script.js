@@ -326,3 +326,6 @@ if (vnsatForm) {
         window.open(whatsappURL, "_blank");
     });
 }
+window.addEventListener('load', () => {
+    document.documentElement.classList.add('loaded');
+});
