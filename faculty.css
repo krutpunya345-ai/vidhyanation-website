@@ -89,7 +89,7 @@
 }
 .faculty-hero .hero-top {
     color: #FBBF24;
-    font-size: 15px;
+    font-size: clamp(12px, 1.5vw, 14px);
     letter-spacing: 4px;
     text-transform: uppercase;
     margin-bottom: 5px;
@@ -108,7 +108,7 @@
     margin: auto;
     color: #dbeafe;
     line-height: 1.9;
-    font-size: 5px;
+    font-size: clamp(14px, 2vw, 16px);
 }
 @media(max-width:900px) {
     .faculty-hero {
