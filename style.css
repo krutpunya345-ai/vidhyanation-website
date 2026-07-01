@@ -2853,7 +2853,6 @@ form select option {
 .about-section,
 .features,
 .testimonials,
-.faq-section,
 .contact-page-section,
 .social-connect-section,
 .hall-of-fame,
@@ -2868,3 +2867,13 @@ form select option {
     .quote-mark{
         animation:none;
     }
+    iframe {
+    width: 100%;
+    max-width: 100%;
+}
+.faq-item {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+}

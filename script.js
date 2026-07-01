@@ -15,8 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             item.classList.add("from-right");
         }
-        const button = item.querySelector(".faq-question");
-        button.addEventListener("click", (e) => {
+       const button = item.querySelector(".faq-question");
+if (!button) return;
+button.addEventListener("click", (e) => {
             // Close all other FAQs
             faqItems.forEach((other) => {
                 if (other !== item) {
@@ -47,18 +48,8 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
         ripple.remove();
     }, 700);
-
-}
-            ripple.classList.add("ripple");
-            const rect = item.getBoundingClientRect();
-            ripple.style.left =
-                (e.clientX - rect.left) + "px";
-            ripple.style.top =
-                (e.clientY - rect.top) + "px";
-            item.appendChild(ripple);
-            setTimeout(() => {
-                ripple.remove();
-            }, 700);
+            }
+          
         });
     });
     /* ======================================================
@@ -143,12 +134,13 @@ document.addEventListener("DOMContentLoaded", () => {
 ===================================================== */
 const revealElements = document.querySelectorAll(
 ".highlight-card, .feature-card,.testimonial-card, .faq-item");
-const observer = new IntersectionObserver(
+
+const revealObserver = new IntersectionObserver(
     (entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("show");
-                observer.unobserve(entry.target);
+                revealObserver.unobserve(entry.target);
             }
         });
     },
@@ -157,7 +149,7 @@ const observer = new IntersectionObserver(
     }
 );
 revealElements.forEach((el) => {
-    observer.observe(el);
+   revealObserver.observe(el);
 });
 /* ======================================================
             PREMIUM COUNTER ANIMATION
@@ -249,9 +241,7 @@ window.addEventListener("click", function (e) {
         demoModal.style.display = "none";
     }
 });
-/* =====================================================
-        SUBMIT FREE DEMO TO GOOGLE FORM
-===================================================== */
+
 /* =====================================================
             SUBMIT TO WHATSAPP
 ===================================================== */
@@ -369,14 +359,4 @@ if (vnsatForm) {
 window.addEventListener('load', () => {
     document.documentElement.classList.add('loaded');
 });
-if (window.innerWidth > 768) {
-    const cursorGlow = document.getElementById("cursor-glow");
-
-    if (cursorGlow) {
-        document.addEventListener("mousemove", (e) => {
-            cursorGlow.style.left = e.clientX + "px";
-            cursorGlow.style.top = e.clientY + "px";
-        });
-    }
-}
 });
