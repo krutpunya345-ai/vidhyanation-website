@@ -323,7 +323,7 @@ body {
 }
 .hero h1 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 72px;
+    font-size: 58px;
     line-height: 1.1;
     margin-bottom: 15px;
 }
@@ -331,16 +331,16 @@ body {
     color: #fbbf24;
 }
 .hero h3 {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 500;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 .hero-description {
     max-width: 720px;
     margin: auto;
     color: #dbeafe;
-    line-height: 1.9;
-    font-size: 19px;
+    line-height: 1.8;
+    font-size: 17px;
 }
 .hero-buttons {
     display: flex;
@@ -2381,6 +2381,14 @@ body {
     transition: .35s;
     position: relative;
 }
+.topper-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.topper-card .view-result-btn {
+    margin-top: auto;
+}
 .topper-card:hover {
     transform: translateY(-12px);
     box-shadow: 0 25px 60px rgba(251, 191, 36, .15);
@@ -2405,9 +2413,8 @@ body {
 
 .topper-card img {
     width: 100%;
-    height: auto;
-    object-fit: contain;
-    display: block;
+    height: 420px;
+    object-fit: cover;
 }
 
 .topper-card h3 {
@@ -2441,6 +2448,11 @@ body {
     height: auto;
     object-fit: cover;
     border-radius: 20px;
+}
+.topper-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 /* =====================================================
                 BOARD PERFORMANCE
@@ -2876,4 +2888,28 @@ form select option {
     opacity: 1 !important;
     visibility: visible !important;
     transform: none !important;
+}
+.courses-section .section-title h2,
+.faculty-section .section-title h2,
+.results-section .section-title h2 {
+    font-size: 2.8rem;
+}
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 48px;
+    }
+    .hero h3 {
+        font-size: 22px;
+    }
+}
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 38px;
+    }
+    .hero h3 {
+        font-size: 20px;
+    }
+    .hero-description {
+        font-size: 16px;
+    }
 }
