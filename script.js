@@ -83,28 +83,36 @@ document.addEventListener("DOMContentLoaded", () => {
     /* ======================================================
                 OPTIONAL FLOAT EFFECT
     ====================================================== */
+  if (window.innerWidth > 768) {
+
     testimonialCards.forEach((card) => {
+
         card.addEventListener("mousemove", (e) => {
+
             const rect = card.getBoundingClientRect();
-            const x =
-                e.clientX - rect.left;
-            const y =
-                e.clientY - rect.top;
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
             const rotateY =
                 ((x / rect.width) - 0.5) * 10;
+
             const rotateX =
                 ((y / rect.height) - 0.5) * -10;
+
             card.style.transform =
                 `perspective(900px)
                  rotateX(${rotateX}deg)
                  rotateY(${rotateY}deg)
                  translateY(-8px)`;
         });
+
         card.addEventListener("mouseleave", () => {
             card.style.transform = "";
         });
+
     });
-});
+
+}
 /* =====================================================
             PREMIUM SCROLL REVEAL
 ===================================================== */
@@ -182,12 +190,15 @@ if (backToTop) {
 /* ======================================================
                 CURSOR GLOW
 ====================================================== */
-const cursorGlow = document.getElementById("cursor-glow");
-if (cursorGlow) {
-    document.addEventListener("mousemove", (e) => {
-        cursorGlow.style.left = e.clientX + "px";
-        cursorGlow.style.top = e.clientY + "px";
-    });
+if (window.innerWidth > 768) {
+    const cursorGlow =
+        document.getElementById("cursor-glow");
+    if (cursorGlow) {
+        document.addEventListener("mousemove", (e) => {
+            cursorGlow.style.left = e.clientX + "px";
+            cursorGlow.style.top = e.clientY + "px";
+        });
+    }
 }
 /* =====================================================
                 FREE DEMO MODAL
@@ -329,3 +340,13 @@ if (vnsatForm) {
 window.addEventListener('load', () => {
     document.documentElement.classList.add('loaded');
 });
+if (window.innerWidth > 768) {
+    const cursorGlow = document.getElementById("cursor-glow");
+
+    if (cursorGlow) {
+        document.addEventListener("mousemove", (e) => {
+            cursorGlow.style.left = e.clientX + "px";
+            cursorGlow.style.top = e.clientY + "px";
+        });
+    }
+}
