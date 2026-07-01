@@ -28,7 +28,27 @@ document.addEventListener("DOMContentLoaded", () => {
             /* ===============================
                     GOLD RIPPLE EFFECT
             =============================== */
-            const ripple = document.createElement("span");
+            if (window.innerWidth > 768) {
+
+    const ripple = document.createElement("span");
+
+    ripple.classList.add("ripple");
+
+    const rect = item.getBoundingClientRect();
+
+    ripple.style.left =
+        (e.clientX - rect.left) + "px";
+
+    ripple.style.top =
+        (e.clientY - rect.top) + "px";
+
+    item.appendChild(ripple);
+
+    setTimeout(() => {
+        ripple.remove();
+    }, 700);
+
+}
             ripple.classList.add("ripple");
             const rect = item.getBoundingClientRect();
             ripple.style.left =
@@ -48,8 +68,12 @@ document.addEventListener("DOMContentLoaded", () => {
         (entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                }
+
+    entry.target.classList.add("show");
+
+    observer.unobserve(entry.target);
+
+}
             });
         },
         {
@@ -70,6 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add("show");
+                        observer.unobserve(entry.target);
                     }
                 });
             },
@@ -117,13 +142,13 @@ document.addEventListener("DOMContentLoaded", () => {
             PREMIUM SCROLL REVEAL
 ===================================================== */
 const revealElements = document.querySelectorAll(
-    ".highlight-card, .glass-card, .feature-card, .testimonial-card, .faq-item, .contact-card, .social-card, .qr-card"
-);
+".highlight-card, .feature-card,.testimonial-card, .faq-item");
 const observer = new IntersectionObserver(
     (entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("show");
+                observer.unobserve(entry.target);
             }
         });
     },
@@ -298,8 +323,12 @@ const topperObserver = new IntersectionObserver(
     (entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add("show");
-            }
+
+    entry.target.classList.add("show");
+
+    observer.unobserve(entry.target);
+
+}
         });
     },
     {
@@ -350,3 +379,4 @@ if (window.innerWidth > 768) {
         });
     }
 }
+});

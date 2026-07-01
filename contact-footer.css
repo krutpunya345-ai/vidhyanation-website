@@ -50,8 +50,8 @@
 .contact-card {
     position: relative;
     background: rgba(255, 255, 255, .07);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, .10);
     border-radius: 28px;
     padding: 42px;
@@ -338,10 +338,6 @@
 /* =========================================================
                 DIGITAL ECOSYSTEM
 ========================================================= */
-.digital-ecosystem {
-    padding: 120px 8%;
-    position: relative;
-}
 .digital-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -350,8 +346,8 @@
 }
 .social-card {
     background: rgba(255, 255, 255, .06);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, .08);
     border-radius: 28px;
     padding: 40px;
@@ -411,8 +407,8 @@
 }
 .social-card {
     background: rgba(255, 255, 255, .06);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, .08);
     border-radius: 28px;
     padding: 40px;
@@ -543,4 +539,17 @@
     .premium-footer {
         padding: 70px 6% 35px;
     }
+}
+@media(max-width:768px){
+
+    .contact-card{
+        animation:none;
+    }
+
+}
+.contact-section,
+.digital-ecosystem,
+.premium-footer {
+    content-visibility: auto;
+    contain-intrinsic-size: 800px;
 }

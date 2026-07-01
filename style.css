@@ -95,7 +95,7 @@ body {
 .glow {
     position: absolute;
     border-radius: 50%;
-    filter: blur(90px);
+    filter: blur(40px);
 }
 .glow1 {
     width: 350px;
@@ -202,7 +202,7 @@ body {
     align-items: center;
     padding: 15px 20px;
     background: rgba(12, 8, 20, 0.95);
-    backdrop-filter: blur(18px);
+    backdrop-filter: blur(5px);
     box-sizing: border-box;
 }
 .logo-area {
@@ -290,7 +290,7 @@ body {
 }
 .hero-content {
     max-width: 900px;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, .45);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, .3);
     backdrop-filter: blur(2px);
 }
 .hero-logo {
@@ -425,7 +425,7 @@ section {
 }
 .highlight-card {
     background: rgba(255, 255, 255, .07);
-    backdrop-filter: blur(14px);
+    backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, .08);
     border-radius: 24px;
     padding: 35px;
@@ -482,7 +482,7 @@ section {
 .glass-card {
     background:
         rgba(255, 255, 255, .08);
-    backdrop-filter: blur(14px);
+    backdrop-filter: blur(5px);
     border-radius: 24px;
     padding: 35px;
     border: 1px solid rgba(255, 255, 255, .08);
@@ -516,7 +516,7 @@ section {
 .feature-card {
     background:
         rgba(255, 255, 255, .07);
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(5px);
     border-radius: 24px;
     border: 1px solid rgba(255, 255, 255, .08);
     padding: 35px;
@@ -851,8 +851,8 @@ section {
 /* Glass Card */
 .testimonial-card {
     background: rgba(35, 10, 30, 0.72);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(251, 191, 36, .22);
     display: flex;
     flex-direction: column;
@@ -1048,7 +1048,7 @@ section {
     border-radius: 50%;
     top: -140px;
     left: -120px;
-    filter: blur(90px);
+    filter: blur(40px);
     background:
         radial-gradient(circle,
             rgba(251, 191, 36, .18),
@@ -1063,7 +1063,7 @@ section {
     border-radius: 50%;
     bottom: -120px;
     right: -120px;
-    filter: blur(85px);
+    filter: blur(35px);
     background:
         radial-gradient(circle,
             rgba(255, 140, 0, .14),
@@ -1111,8 +1111,8 @@ section {
     border-radius: 24px;
     background:
         rgba(255, 255, 255, .06);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border:
         1px solid rgba(255, 255, 255, .08);
     transition:
@@ -1443,12 +1443,17 @@ section {
 /* =====================================================
         GLOBAL PREMIUM TRANSITIONS
 ===================================================== */
-* {
-    transition:
-        color .25s ease,
-        background-color .25s ease,
-        border-color .25s ease,
-        box-shadow .25s ease;
+.primary-btn,
+.secondary-btn,
+.demo-btn,
+.feature-card,
+.highlight-card,
+.glass-card,
+.course-card,
+.topper-card,
+.testimonial-card,
+.faq-item {
+    transition: .35s ease;
 }
 img {
     user-select: none;
@@ -1539,6 +1544,11 @@ body {
         left .08s linear,
         top .08s linear;
 }
+@media(max-width:768px){
+    #cursor-glow{
+        display:none;
+    }
+}
 @media(max-width:900px) {
     .nav-links {
         display: none;
@@ -1555,8 +1565,8 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     justify-content: center;
     align-items: center;
     z-index: 99999;
@@ -1788,8 +1798,8 @@ body {
 .course-card {
     position: relative;
     background: rgba(255, 255, 255, .05);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, .08);
     border-radius: 28px;
     padding: 35px;
@@ -1889,8 +1899,8 @@ body {
     margin: auto;
     text-align: center;
     background: rgba(255, 255, 255, .05);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(251, 191, 36, .18);
     border-radius: 30px;
     padding: 70px 50px;
@@ -1971,7 +1981,7 @@ body {
 .journey-card {
     width: 240px;
     background: rgba(255, 255, 255, .05);
-    backdrop-filter: blur(18px);
+    backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, .08);
     border-radius: 24px;
     padding: 35px 25px;
@@ -2031,8 +2041,8 @@ body {
     width: 100%;
     text-align: center;
     background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(251, 191, 36, 0.2);
     border-radius: 30px;
     padding: 70px 50px;
@@ -2080,8 +2090,8 @@ body {
 }
 .contact-info-card {
     background: rgba(255, 255, 255, .05);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, .08);
     border-radius: 25px;
     padding: 35px;
@@ -2149,7 +2159,7 @@ body {
 .contact-form-card,
 .quick-action-card {
     background: rgba(255, 255, 255, .05);
-    backdrop-filter: blur(18px);
+    backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, .08);
     border-radius: 30px;
     padding: 45px;
@@ -2229,8 +2239,8 @@ body {
 }
 .social-connect-card {
     background: rgba(255, 255, 255, .05);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, .08);
     border-radius: 25px;
     padding: 40px 30px;
@@ -2325,7 +2335,7 @@ body {
 }
 .achievement-card {
     background: rgba(255, 255, 255, .05);
-    backdrop-filter: blur(18px);
+    backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, .08);
     border-radius: 24px;
     padding: 35px;
@@ -2363,7 +2373,7 @@ body {
 }
 .topper-card {
     background: rgba(255, 255, 255, .05);
-    backdrop-filter: blur(18px);
+    backdrop-filter: blur(5px);
     border-radius: 30px;
     padding: 40px;
     text-align: center;
@@ -2446,7 +2456,7 @@ body {
 }
 .performance-card {
     background: rgba(255, 255, 255, .05);
-    backdrop-filter: blur(18px);
+    backdrop-filter: blur(5px);
     border-radius: 25px;
     padding: 40px;
     border: 1px solid rgba(255, 255, 255, .08);
@@ -2699,7 +2709,7 @@ body {
 }
 .gallery-box {
     background: rgba(255, 255, 255, .06);
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, .08);
     border-radius: 25px;
     padding: 45px 30px;
@@ -2829,3 +2839,32 @@ form select option {
         margin: 0 auto;
     }
 }
+@media(max-width:768px){
+
+    .particle,
+    .floating-symbol,
+    .chart-line,
+    .candles{
+        display:none;
+    }
+
+}
+.highlights,
+.about-section,
+.features,
+.testimonials,
+.faq-section,
+.contact-page-section,
+.social-connect-section,
+.hall-of-fame,
+.courses-section,
+.vnsat-section,
+.journey-section {
+    content-visibility: auto;
+    contain-intrinsic-size: 1000px;
+}
+    .hero-logo,
+    .student-avatar,
+    .quote-mark{
+        animation:none;
+    }
