@@ -192,7 +192,13 @@ body {
     align-items: center;
     padding: 15px 20px;
     background: rgba(12, 8, 20, 0.95);
-    backdrop-filter: blur(5px);
+   @media(max-width:768px){
+
+backdrop-filter:none;
+
+-webkit-backdrop-filter:none;
+
+}
     box-sizing: border-box;
 }
 .logo-area {
@@ -281,7 +287,13 @@ body {
 .hero-content {
     max-width: 900px;
     text-shadow: 0 4px 20px rgba(0, 0, 0, .3);
-    backdrop-filter: blur(2px);
+   @media(max-width:768px){
+
+backdrop-filter:none;
+
+-webkit-backdrop-filter:none;
+
+}
 }
 .hero-logo {
     width: 130px;
@@ -415,7 +427,13 @@ section {
 }
 .highlight-card {
     background: rgba(255, 255, 255, .07);
-    backdrop-filter: blur(5px);
+   @media(max-width:768px){
+
+backdrop-filter:none;
+
+-webkit-backdrop-filter:none;
+
+}
     border: 1px solid rgba(255, 255, 255, .08);
     border-radius: 24px;
     padding: 35px;
@@ -472,7 +490,13 @@ section {
 .glass-card {
     background:
         rgba(255, 255, 255, .08);
-    backdrop-filter: blur(5px);
+    @media(max-width:768px){
+
+backdrop-filter:none;
+
+-webkit-backdrop-filter:none;
+
+}
     border-radius: 24px;
     padding: 35px;
     border: 1px solid rgba(255, 255, 255, .08);
@@ -506,7 +530,10 @@ section {
 .feature-card {
     background:
         rgba(255, 255, 255, .07);
-    backdrop-filter: blur(5px);
+    @media(max-width:768px){
+        backdrop-filter:none;
+        -webkit-backdrop-filter:none;
+    }
     border-radius: 24px;
     border: 1px solid rgba(255, 255, 255, .08);
     padding: 35px;
@@ -1556,8 +1583,10 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+   @media(max-width:768px){
+    backdrop-filter:none;
+    -webkit-backdrop-filter:none;
+}
     justify-content: center;
     align-items: center;
     z-index: 99999;
@@ -1972,7 +2001,13 @@ body {
 .journey-card {
     width: 240px;
     background: rgba(255, 255, 255, .05);
-    backdrop-filter: blur(5px);
+   @media(max-width:768px){
+
+backdrop-filter:none;
+
+-webkit-backdrop-filter:none;
+
+}
     border: 1px solid rgba(255, 255, 255, .08);
     border-radius: 24px;
     padding: 35px 25px;
@@ -2032,8 +2067,13 @@ body {
     width: 100%;
     text-align: center;
     background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+   @media(max-width:768px){
+
+backdrop-filter:none;
+
+-webkit-backdrop-filter:none;
+
+}
     border: 1px solid rgba(251, 191, 36, 0.2);
     border-radius: 30px;
     padding: 70px 50px;
@@ -2150,7 +2190,13 @@ body {
 .contact-form-card,
 .quick-action-card {
     background: rgba(255, 255, 255, .05);
-    backdrop-filter: blur(5px);
+  @media(max-width:768px){
+
+backdrop-filter:none;
+
+-webkit-backdrop-filter:none;
+
+}
     border: 1px solid rgba(255, 255, 255, .08);
     border-radius: 30px;
     padding: 45px;
@@ -2230,8 +2276,13 @@ body {
 }
 .social-connect-card {
     background: rgba(255, 255, 255, .05);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    @media(max-width:768px){
+
+backdrop-filter:none;
+
+-webkit-backdrop-filter:none;
+
+}
     border: 1px solid rgba(255, 255, 255, .08);
     border-radius: 25px;
     padding: 40px 30px;
@@ -2326,7 +2377,13 @@ body {
 }
 .achievement-card {
     background: rgba(255, 255, 255, .05);
-    backdrop-filter: blur(5px);
+    @media(max-width:768px){
+
+backdrop-filter:none;
+
+-webkit-backdrop-filter:none;
+
+}
     border: 1px solid rgba(255, 255, 255, .08);
     border-radius: 24px;
     padding: 35px;
@@ -2364,7 +2421,13 @@ body {
 }
 .topper-card {
     background: rgba(255, 255, 255, .05);
-    backdrop-filter: blur(5px);
+    @media(max-width:768px){
+
+backdrop-filter:none;
+
+-webkit-backdrop-filter:none;
+
+}
     border-radius: 30px;
     padding: 40px;
     text-align: center;
@@ -2459,7 +2522,10 @@ body {
 }
 .performance-card {
     background: rgba(255, 255, 255, .05);
-    backdrop-filter: blur(5px);
+    @media(max-width:768px){
+        backdrop-filter:none;
+        -webkit-backdrop-filter:none;
+    }
     border-radius: 25px;
     padding: 40px;
     border: 1px solid rgba(255, 255, 255, .08);
@@ -2712,7 +2778,13 @@ body {
 }
 .gallery-box {
     background: rgba(255, 255, 255, .06);
-    backdrop-filter: blur(5px);
+    @media(max-width:768px){
+
+backdrop-filter:none;
+
+-webkit-backdrop-filter:none;
+
+}
     border: 1px solid rgba(255, 255, 255, .08);
     border-radius: 25px;
     padding: 45px 30px;
@@ -2903,4 +2975,24 @@ form select option {
     .hero-description {
         font-size: clamp(14px, 2vw, 16px);
     }
+}
+@media(max-width:768px){
+
+#cursor-glow,
+.particle,
+.floating-symbol,
+.chart-line,
+.candles,
+.glow{
+
+display:none;
+
+}
+
+.hero-logo{
+
+animation:none;
+
+}
+
 }
