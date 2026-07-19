@@ -2360,7 +2360,7 @@ body {
     margin-top: 60px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 35px;
+    gap: 30px;
 }
 .topper-card {
     background: rgba(255, 255, 255, .05);
@@ -2376,7 +2376,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-
 .topper-card .view-result-btn {
     margin-top: auto;
 }
@@ -2401,13 +2400,6 @@ body {
 .topper-grid {
     align-items: start;
 }
-
-.topper-card img {
-    width: 100%;
-    height: 420px;
-    object-fit: cover;
-}
-
 .topper-card h3 {
     color: #ffffff;
     margin-bottom: 10px;
@@ -2439,11 +2431,6 @@ body {
     height: auto;
     object-fit: cover;
     border-radius: 20px;
-}
-.topper-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
 }
 /* =====================================================
                 BOARD PERFORMANCE
@@ -2912,34 +2899,71 @@ form select option {
 
 }
 @media (max-width:768px){
-
-    .highlight-card,
-    .feature-card,
-    .testimonial-card,
-    .glass-card,
-    .faq-item,
-    .contact-card,
-    .faculty-card,
-    .course-card,
-    .topper-item,
-    .navbar {
-
-        backdrop-filter:none !important;
-        -webkit-backdrop-filter:none !important;
-
-        background:rgba(10,20,40,0.95) !important;
-
+    .glow,
+    .glow1,
+    .glow2,
+    .glow3,
+    .floating-symbol,
+    .chart-line,
+    .candles,
+    .particle,
+    #cursor-glow{
+        display:none !important;
+    }
+    .hero::before,
+    .testimonials::before,
+    .faq-section::before,
+    .faq-section::after{
+        display:none !important;
     }
 
 }
 @media (max-width:768px){
 
-    .glow,
-    .glow1,
-    .glow2,
-    .glow3,
-    #cursor-glow{
+    .navbar,
+    .highlight-card,
+    .glass-card,
+    .feature-card,
+    .testimonial-card,
+    .faq-item,
+    .course-card,
+    .vnsat-container,
+    .journey-card,
+    .cta-box,
+    .contact-info-card,
+    .contact-form-card,
+    .quick-action-card,
+    .social-connect-card,
+    .achievement-card,
+    .topper-card,
+    .performance-card{
+        backdrop-filter:none !important;
+        -webkit-backdrop-filter:none !important;
+    }
+}
+@media (max-width:768px){
+    .hero-logo,
+    .student-avatar,
+    .quote-mark{
+        animation:none !important;
+    }
+}
+@media (max-width:768px){
+    .faq-item::before,
+    .faq-item::after,
+    .faq-section .section-title::after{
         display:none !important;
     }
-
+    .faq-container:hover .faq-item:not(:hover){
+        filter:none !important;
+    }
+}
+.hero-content{
+    text-shadow:none;
+}
+@media(max-width:768px){
+    .demo-modal{
+        backdrop-filter:none;
+        -webkit-backdrop-filter:none;
+    }
 }
