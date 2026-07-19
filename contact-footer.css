@@ -553,3 +553,17 @@
     content-visibility: auto;
     contain-intrinsic-size: 800px;
 }
+@media (max-width:768px){
+    .ripple{
+        display:none !important;
+    }
+}
+@media (max-width:768px){
+    .glow,
+    .glow1,
+    .glow2,
+    .glow3,
+    #cursor-glow{
+        display:none !important;
+    }
+}
