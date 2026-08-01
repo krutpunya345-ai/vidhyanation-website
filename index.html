@@ -38,12 +38,24 @@ content="en_IN">
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="contact-footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
 rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-<title>VidhyaNation Commerce Academy | Best Commerce Coaching for Class 11 & 12</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/images/logo.png" type="image/png">
+
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VidhyaNation Commerce Academy | Best Commerce Coaching for Class 11 & 12</title>
+<meta name="description"
+content="Premium coaching for CBSE Class 11 & 12 Commerce students. Expert guidance in Accountancy, Business Studies, Economics and Applied Mathematics.">
 <link rel="canonical" href="https://vidhyanationacademy.com">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
@@ -52,7 +64,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 </head>
 
 <body>
-<a href="#main-content" class="skip-link">Skip to main content</a>
 <div class="mobile-overlay"></div>
 
 
@@ -101,7 +112,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
     <header>
 
-        <nav class="navbar" aria-label="Main navigation">
+        <nav class="navbar">
 
             <a href="index.html" class="logo-area">
 
@@ -117,9 +128,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
             </a>
 
-            <ul class="nav-links" id="primary-navigation">
+            <ul class="nav-links">
 
-                <li><a class="active" href="index.html" aria-current="page">Home</a></li>
+                <li><a class="active" href="index.html">Home</a></li>
 
                 <li><a href="courses.html">Courses</a></li>
 
@@ -135,18 +146,16 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
             
 <!-- Mobile Menu Button -->
 
-<button type="button" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">
+<div class="menu-toggle">
 
-    <i class="fas fa-bars" aria-hidden="true"></i>
+    <i class="fas fa-bars"></i>
 
-</button>
+</div>
 
 </nav>
 
 
     </header>
-
-    <main id="main-content">
 
     <!-- ================= HERO ================= -->
 
@@ -1382,8 +1391,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
 
 </section>
-    </main>
-
 <!-- =====================================================
                     PREMIUM FOOTER
 ===================================================== -->
@@ -1572,13 +1579,13 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
                 FREE DEMO MODAL
 ===================================================== -->
 
-<div id="demoModal" class="demo-modal" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle" aria-hidden="true">
+<div id="demoModal" class="demo-modal">
 
     <div class="demo-modal-content">
 
-        <span class="close-demo" role="button" tabindex="0" aria-label="Close dialog">&times;</span>
+        <span class="close-demo">&times;</span>
 
-        <h2 id="demoModalTitle">🎓 Book Your Free Demo Class</h2>
+        <h2>🎓 Book Your Free Demo Class</h2>
 
         <p>
             Fill in your details and our team will contact you shortly.
@@ -1587,7 +1594,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         <form id="demoForm">
 
             <!-- Student Name -->
-            <label class="sr-only" for="studentName">Student Name</label>
             <input
                 type="text"
                 id="studentName"
@@ -1596,7 +1602,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
             >
 
             <!-- Mobile Number -->
-            <label class="sr-only" for="studentPhone">Mobile Number</label>
             <input
                 type="tel"
                 id="studentPhone"
@@ -1605,7 +1610,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
             >
 
             <!-- Class -->
-            <label class="sr-only" for="studentClass">Class</label>
             <select
                 id="studentClass"
                 required
@@ -1624,7 +1628,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
             </select>
 
             <!-- Subject -->
-            <label class="sr-only" for="studentSubject">Subject</label>
             <select
                 id="studentSubject"
                 required
@@ -1656,7 +1659,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
             <!-- Message -->
 
-            <label class="sr-only" for="studentMessage">Additional Message (Optional)</label>
             <textarea
 
                 id="studentMessage"

@@ -1,46 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
+<div id="demoModal" class="demo-modal">
+    <head>
 
-<head>
+    <!-- Meta tags -->
 
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Contact Us | VidhyaNation Commerce Academy</title>
-
-    <meta name="description"
-        content="Get in touch with VidhyaNation Commerce Academy for admissions, demo classes and course enquiries.">
-    <link rel="canonical" href="https://vidhyanationacademy.com/contact.html">
-
-    <meta property="og:title" content="Contact Us | VidhyaNation Commerce Academy">
-    <meta property="og:description" content="Contact VidhyaNation Commerce Academy for admissions, enquiries and demo classes.">
-    <meta property="og:url" content="https://vidhyanationacademy.com/contact.html">
-    <meta property="og:image" content="https://vidhyanationacademy.com/assets/images/logo.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- CSS files -->
 
     <link rel="stylesheet" href="style.css">
+
     <link rel="stylesheet" href="contact-footer.css">
+    <meta property="og:title"
+content="Contact Us | VidhyaNation Commerce Academy">
+
+<meta property="og:description"
+content="Contact VidhyaNation Commerce Academy for admissions, enquiries and demo classes.">
+
+<meta property="og:url"
+content="https://vidhyanationacademy.com/contact.html">
+
+<meta property="og:image"
+content="https://vidhyanationacademy.com/assets/images/logo.png">
+    
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VidhyaNation Commerce Academy</title>
+    <meta name="description"
+content="Get in touch with VidhyaNation Commerce Academy for admissions, demo classes and course enquiries.">
 
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="canonical" href="https://vidhyanationacademy.com/contact.html">
+
+    <!-- Other CSS files -->
 
 </head>
-
-<body>
-
-<a href="#main-content" class="skip-link">Skip to main content</a>
-
-<div class="mobile-overlay"></div>
-
-<!-- ================= NAVBAR ================= -->
+    <!-- ================= NAVBAR ================= -->
 
 <header>
 
-    <nav class="navbar" aria-label="Main navigation">
+    <nav class="navbar">
 
         <a href="index.html" class="logo-area">
 
@@ -56,7 +59,7 @@
 
         </a>
 
-        <ul class="nav-links" id="primary-navigation">
+        <ul class="nav-links">
 
             <li><a href="index.html">Home</a></li>
 
@@ -68,145 +71,270 @@
 
             <li><a href="gallery.html">Gallery</a></li>
 
-            <li><a class="active" href="contact.html" aria-current="page">Contact</a></li>
+            <li><a class="active" href="contact.html">Contact</a></li>
 
         </ul>
 
         <!-- Mobile Menu -->
 
-        <button type="button" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">
+        <div class="menu-toggle">
 
-            <i class="fas fa-bars" aria-hidden="true"></i>
+            <i class="fas fa-bars"></i>
 
-        </button>
+        </div>
 
     </nav>
 
 </header>
 
-<main id="main-content">
+</head>
 
+
+<body>
+    
+<div class="mobile-overlay"></div>
 <!-- =====================================================
-                    CONTACT HERO
+                FREE DEMO MODAL
 ===================================================== -->
 
-<section class="courses-hero">
+<div id="demoModal" class="demo-modal">
 
-    <div class="courses-hero-content">
+    <div class="demo-modal-content">
 
-        <span class="hero-tag">GET IN TOUCH</span>
+        <span class="close-demo">&times;</span>
 
-        <h1>
-            We're Here To
-            <span>Help You Succeed</span>
-        </h1>
+        <h2>🎓 Book Your Free Demo Class</h2>
 
         <p>
-            Have a question about admissions, courses or the VNSAT scholarship test?
-            Reach out and our team will get back to you shortly.
+            Fill in your details and our team will contact you shortly.
         </p>
 
-        <div class="hero-buttons">
+        <form
+    id="demoForm"
+    target="hidden_iframe"
+    method="POST"
+    action="https://docs.google.com/forms/d/e/1FAIpQLSci-dDz8dLqPxH8IEhwF71nme-Iie08_Y2kfCQ4XjzbA3MBSA/formResponse">
 
-            <a href="#" class="primary-btn open-demo">Book Free Demo</a>
+            <!-- Student Name -->
+            <input
+    type="text"
+    id="studentName"
+    name="entry.160795722"
+            >
 
-            <a href="https://wa.me/919171505292" target="_blank" rel="noopener" class="secondary-btn">Chat on WhatsApp</a>
+            <!-- Mobile Number -->
+           <input
+    type="tel"
+    id="studentPhone"
+    name="entry.1277756460"
+            >
 
-        </div>
+            <!-- Class -->
+           <select
+    id="studentClass"
+    name="entry.2103548784">
+                <option value="">Select Class</option>
+
+                <option value="Class 11 Commerce">
+                    Class 11 Commerce
+                </option>
+
+                <option value="Class 12 Commerce">
+                    Class 12 Commerce
+                </option>
+
+            </select>
+
+            <!-- Subject -->
+           <select
+    id="studentSubject"
+    name="entry.1494188143">
+
+                <option value="">Select Subject</option>
+
+                <option value="Accountancy">
+                    Accountancy
+                </option>
+
+                <option value="Business Studies">
+                    Business Studies
+                </option>
+
+                <option value="Economics">
+                    Economics
+                </option>
+
+                <option value="Applied Mathematics">
+                    Applied Mathematics
+                </option>
+
+                <option value="Entrepreneurship">
+                    Entrepreneurship
+                </option>
+
+            </select>
+
+            <!-- Message -->
+
+            <textarea
+
+                id="studentMessage"
+
+                rows="4"
+
+                placeholder="Additional Message (Optional)"
+
+            ></textarea>
+
+            <button
+
+                type="submit"
+
+                class="submit-demo-btn"
+
+            >
+
+                🚀 Book Free Demo
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+                    CALL US
+===================================================== -->
+
+<div class="contact-info-card">
+
+    <div class="contact-info-icon">
+
+        <i class="fa-solid fa-phone"></i>
+
+    </div>
+
+    <h3>
+
+        Call Us
+
+    </h3>
+
+    <p>
+
+        Speak directly with our admission team.
+
+    </p>
+
+    <a href="tel:+919171505292">
+
+        +91 91715 05292
+
+    </a>
+
+</div>
+
+<!-- =====================================================
+                    EMAIL
+===================================================== -->
+
+<div class="contact-info-card">
+
+    <div class="contact-info-icon">
+
+        <i class="fa-solid fa-envelope"></i>
+
+    </div>
+
+    <h3>
+
+        Email Us
+
+    </h3>
+
+    <p>
+
+        Send your admission and course enquiries.
+
+    </p>
+
+    <a href="mailto:vidhyanationacademyvna@gmail.com">
+
+        vidhyanationacademyvna@gmail.com
+
+    </a>
+
+</div>
+
+
+<!-- =====================================================
+                    TIMINGS
+===================================================== -->
+
+<div class="contact-info-card">
+
+    <div class="contact-info-icon">
+
+        <i class="fa-solid fa-clock"></i>
+
+    </div>
+
+    <h3>
+
+        Working Hours
+
+    </h3>
+
+    <p>
+
+        Monday – Saturday
+
+    </p>
+
+    <a href="#">
+
+        9:00 AM – 8:00 PM
+
+    </a>
+
+</div>
 
     </div>
 
 </section>
 
 <!-- =====================================================
-                CONTACT INFO CARDS
+                    LOCATION
 ===================================================== -->
 
-<section class="contact-page-section">
+<div class="contact-info-card">
 
-    <div class="section-title">
+    <div class="contact-info-icon">
 
-        <span>CONTACT INFORMATION</span>
-
-        <h2>
-            Reach Us
-            <span>Anytime</span>
-        </h2>
+        <i class="fa-solid fa-location-dot"></i>
 
     </div>
 
-    <div class="contact-grid">
+    <h3>
 
-        <!-- Call -->
+        Visit Us
 
-        <div class="contact-info-card">
+    </h3>
 
-            <div class="contact-info-icon">
-                <i class="fa-solid fa-phone" aria-hidden="true"></i>
-            </div>
+    <p>
 
-            <h3>Call Us</h3>
+        Shanti Kunj,<br>
 
-            <p>Speak directly with our admission team.</p>
+        Krishi Vihar Colony Rd,<br>
 
-            <a href="tel:+919171505292">+91 91715 05292</a>
+        Tilak Nagar,<br>
 
-        </div>
+        Indore, Madhya Pradesh 452018
 
-        <!-- Email -->
-
-        <div class="contact-info-card">
-
-            <div class="contact-info-icon">
-                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-            </div>
-
-            <h3>Email Us</h3>
-
-            <p>Send your admission and course enquiries.</p>
-
-            <a href="mailto:vidhyanationacademyvna@gmail.com">vidhyanationacademyvna@gmail.com</a>
-
-        </div>
-
-        <!-- Timings -->
-
-        <div class="contact-info-card">
-
-            <div class="contact-info-icon">
-                <i class="fa-solid fa-clock" aria-hidden="true"></i>
-            </div>
-
-            <h3>Working Hours</h3>
-
-            <p>Monday – Saturday</p>
-
-            <span>9:00 AM – 8:00 PM</span>
-
-        </div>
-
-        <!-- Location -->
-
-        <div class="contact-info-card">
-
-            <div class="contact-info-icon">
-                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-            </div>
-
-            <h3>Visit Us</h3>
-
-            <p>
-                Shanti Kunj,<br>
-                Krishi Vihar Colony Rd,<br>
-                Tilak Nagar,<br>
-                Indore, Madhya Pradesh 452018
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
+    </p>
 
 <!-- =====================================================
                     GOOGLE MAP
@@ -216,11 +344,18 @@
 
     <div class="section-title">
 
-        <span>OUR LOCATION</span>
+        <span>
+
+            OUR LOCATION
+
+        </span>
 
         <h2>
+
             Visit
+
             <span>VidhyaNation Academy</span>
+
         </h2>
 
     </div>
@@ -228,14 +363,21 @@
     <div class="map-container">
 
         <iframe
-            title="VidhyaNation Academy location on Google Maps"
+
             src="https://www.google.com/maps?q=VidhyaNation+Academy+Shanti+Kunj+Krishi+Vihar+Colony+Road+Tilak+Nagar+Indore+452018&output=embed"
+
             width="100%"
+
             height="450"
+
             style="border:0; border-radius:25px;"
+
             allowfullscreen=""
+
             loading="lazy"
+
             referrerpolicy="no-referrer-when-downgrade">
+
         </iframe>
 
     </div>
@@ -243,81 +385,143 @@
 </section>
 
 <!-- =====================================================
-            CONTACT FORM & QUICK ACTIONS
+                CONTACT FORM & QUICK ACTIONS
 ===================================================== -->
 
 <section class="contact-form-section">
 
     <div class="contact-form-wrapper">
 
-        <!-- LEFT : ENQUIRY FORM -->
+        <!-- ==========================================
+                    LEFT : ENQUIRY FORM
+        =========================================== -->
 
         <div class="contact-form-card">
 
-            <span class="hero-tag">SEND A MESSAGE</span>
+            <span class="hero-tag">
+
+                SEND A MESSAGE
+
+            </span>
 
             <h2>
+
                 We'd Love To Hear
+
                 <span>From You</span>
+
             </h2>
 
             <p>
+
                 Fill in your details below and we'll connect
                 with you as soon as possible.
+
             </p>
 
             <form id="contactForm">
 
-                <label class="sr-only" for="contactName">Full Name</label>
-                <input type="text" id="contactName" placeholder="Full Name" required>
+                <input
+                    type="text"
+                    id="contactName"
+                    placeholder="Full Name"
+                    required>
 
-                <label class="sr-only" for="contactPhone">Mobile Number</label>
-                <input type="tel" id="contactPhone" placeholder="Mobile Number" required>
+                <input
+                    type="tel"
+                    id="contactPhone"
+                    placeholder="Mobile Number"
+                    required>
 
-                <label class="sr-only" for="contactEmail">Email Address</label>
-                <input type="email" id="contactEmail" placeholder="Email Address">
+                <input
+                    type="email"
+                    id="contactEmail"
+                    placeholder="Email Address">
 
-                <label class="sr-only" for="contactSubject">Subject</label>
-                <input type="text" id="contactSubject" placeholder="Subject">
+                <input
+                    type="text"
+                    id="contactSubject"
+                    placeholder="Subject">
 
-                <label class="sr-only" for="contactMessage">Your Message</label>
-                <textarea id="contactMessage" rows="5" placeholder="Write your message here..."></textarea>
+                <textarea
+                    id="contactMessage"
+                    rows="5"
+                    placeholder="Write your message here..."></textarea>
 
-                <button type="submit" class="primary-btn">
-                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                <button
+                    type="submit"
+                    class="primary-btn">
+
+                    <i class="fab fa-whatsapp"></i>
+
                     Send via WhatsApp
+
                 </button>
 
             </form>
 
         </div>
 
-        <!-- RIGHT : QUICK ACTIONS -->
+        <!-- ==========================================
+                    RIGHT : QUICK ACTIONS
+        =========================================== -->
 
         <div class="quick-action-card">
 
-            <span class="hero-tag">QUICK ACTIONS</span>
+            <span class="hero-tag">
+
+                QUICK ACTIONS
+
+            </span>
 
             <h2>
+
                 Start Your
+
                 <span>Journey Today</span>
+
             </h2>
 
-            <p>Choose the option that best suits you.</p>
+            <p>
+
+                Choose the option that best suits you.
+
+            </p>
 
             <div class="quick-buttons">
 
-                <a href="#" class="primary-btn open-demo">🎓 Book Free Demo</a>
+                <a href="#"
 
-                <a href="#" class="primary-btn open-vnsat">🏆 Register for VNSAT</a>
+                   class="primary-btn open-demo">
 
-                <a href="https://wa.me/919171505292" target="_blank" rel="noopener" class="secondary-btn">💬 Chat on WhatsApp</a>
+                    🎓 Book Free Demo
+
+                </a>
+
+                <a href="#"
+
+                   class="primary-btn open-vnsat">
+
+                    🏆 Register for VNSAT
+
+                </a>
+
+                <a href="https://wa.me/919171505292"
+
+                   target="_blank"
+
+                   class="secondary-btn">
+
+                    💬 Chat on WhatsApp
+
+                </a>
 
             </div>
 
             <div class="contact-note">
 
-                <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                <i class="fa-solid fa-circle-info"></i>
+
                 Our admission team usually responds
                 within a few minutes during working hours.
 
@@ -330,18 +534,26 @@
 </section>
 
 <!-- =====================================================
-                    STAY CONNECTED
+                STAY CONNECTED
 ===================================================== -->
+
 
 <section class="social-connect-section">
 
     <div class="section-title">
 
-        <span>STAY CONNECTED</span>
+        <span>
+
+            STAY CONNECTED
+
+        </span>
 
         <h2>
+
             Connect With
+
             <span>VidhyaNation Academy</span>
+
         </h2>
 
     </div>
@@ -351,52 +563,100 @@
         <!-- Instagram -->
 
         <a href="https://www.instagram.com/vidhyanationacademy?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-           target="_blank" rel="noopener" class="social-connect-card">
 
-            <img src="assets/images/instagram-logo.png" alt="Instagram" class="social-logo">
+           target="_blank"
+
+           class="social-connect-card">
+
+            <img src="assets/images/instagram-logo.png"
+
+                 alt="Instagram"
+
+                 class="social-logo">
 
             <h3>Instagram</h3>
 
-            <p>Daily updates, student achievements, reels and announcements.</p>
+            <p>
+
+                Daily updates, student achievements,
+                reels and announcements.
+
+            </p>
 
         </a>
 
         <!-- YouTube -->
 
         <a href="http://www.youtube.com/@vidhyanationacademy-youtube"
-           target="_blank" rel="noopener" class="social-connect-card">
 
-            <img src="assets/images/youtube-logo.png" alt="YouTube" class="social-logo">
+           target="_blank"
+
+           class="social-connect-card">
+
+            <img src="assets/images/youtube-logo.png"
+
+                 alt="YouTube"
+
+                 class="social-logo">
 
             <h3>YouTube</h3>
 
-            <p>Watch free lectures, revision videos and Commerce guidance.</p>
+            <p>
+
+                Watch free lectures, revision videos
+                and Commerce guidance.
+
+            </p>
 
         </a>
 
         <!-- Play Store -->
 
         <a href="https://play.google.com/store/apps/details?id=co.diy4.wjlge&pcampaignid=web_share"
-           target="_blank" rel="noopener" class="social-connect-card">
 
-            <img src="assets/images/playstore-logo.png" alt="Play Store" class="social-logo">
+           target="_blank"
+
+           class="social-connect-card">
+
+            <img src="assets/images/playstore-logo.png"
+
+                 alt="Play Store"
+
+                 class="social-logo">
 
             <h3>Download Our App</h3>
 
-            <p>Access classes, notes and learning resources through our Android app.</p>
+            <p>
+
+                Access classes, notes and learning
+                resources through our Android app.
+
+            </p>
 
         </a>
 
         <!-- WhatsApp -->
 
         <a href="https://wa.me/919171505292"
-           target="_blank" rel="noopener" class="social-connect-card">
 
-            <img src="assets/images/whatsapp-logo.png" alt="WhatsApp" class="social-logo">
+           target="_blank"
+
+           class="social-connect-card">
+
+            <img src="assets/images/whatsapp-logo.png"
+
+                 alt="WhatsApp"
+
+                 class="social-logo">
 
             <h3>WhatsApp</h3>
 
-            <p>Chat directly with our admission team for instant support.</p>
+            <p>
+
+                Chat directly with our admission
+                team for instant support.
+
+            </p>
 
         </a>
 
@@ -404,198 +664,254 @@
 
 </section>
 
-</main>
-
-<!-- =====================================================
-                    PREMIUM FOOTER
-===================================================== -->
-
-<footer class="premium-footer">
-
-    <div class="footer-container">
-
-        <div class="footer-column">
-
-            <img src="assets/images/logo.png" alt="VidhyaNation Academy" class="footer-logo-img">
-
-            <h2 class="footer-logo">VidhyaNation Academy</h2>
-
-            <p>
-                Building Commerce Leaders through
-                Concept-Based Learning,
-                Personal Mentorship and
-                Academic Excellence.
-            </p>
-
-        </div>
-
-        <div class="footer-column">
-
-            <h3>Quick Links</h3>
-
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="faculty.html">Faculty</a></li>
-                <li><a href="results.html">Results</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-
-        </div>
-
-        <div class="footer-column">
-
-            <h3>Contact</h3>
-
-            <p><i class="fa-solid fa-phone" aria-hidden="true"></i> +91 91715 05292</p>
-            <p><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> +91 91715 05292</p>
-            <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Indore, Madhya Pradesh</p>
-            <p><i class="fa-regular fa-clock" aria-hidden="true"></i> Mon – Sat | 9:00 AM – 9:00 PM</p>
-
-        </div>
-
-        <div class="footer-column">
-
-            <h3>Follow Us</h3>
-
-            <div class="footer-socials">
-
-                <a href="https://youtube.com/@vidhyanationacademy?feature=shared" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
-                <a href="https://www.instagram.com/vidhyanationacademy?igsh=Znp0ZnF0OGV6NWVh" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-                <a href="https://play.google.com/store/apps/details?id=co.diy4.wjlge" target="_blank" rel="noopener" aria-label="Google Play"><i class="fa-brands fa-google-play" aria-hidden="true"></i></a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="footer-divider"></div>
-
-    <div class="footer-bottom">
-        © 2026 <strong>VidhyaNation Academy</strong> | All Rights Reserved
-        <br><br>
-        Designed with ❤️ for Future Commerce Leaders
-    </div>
-
-</footer>
-
-<!-- =====================================================
-                FREE DEMO MODAL
-===================================================== -->
-
-<div id="demoModal" class="demo-modal" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle" aria-hidden="true">
+<div id="demoModal" class="demo-modal">
 
     <div class="demo-modal-content">
 
-        <span class="close-demo" role="button" tabindex="0" aria-label="Close dialog">&times;</span>
+        <span class="close-demo">&times;</span>
 
-        <h2 id="demoModalTitle">🎓 Book Your Free Demo Class</h2>
+        <h2>🎓 Book Your Free Demo Class</h2>
 
-        <p>Fill in your details and we'll connect with you shortly.</p>
+        <p>
+            Fill in your details and we'll connect with you shortly.
+        </p>
 
         <form id="demoForm">
 
-            <label class="sr-only" for="studentName">Student Name</label>
-            <input type="text" id="studentName" placeholder="Student Name" required>
+            <input
+                type="text"
+                id="studentName"
+                placeholder="Student Name"
+                required
+            >
 
-            <label class="sr-only" for="studentPhone">Mobile Number</label>
-            <input type="tel" id="studentPhone" placeholder="Mobile Number" required>
+            <input
+                type="tel"
+                id="studentPhone"
+                placeholder="Mobile Number"
+                required
+            >
 
-            <label class="sr-only" for="studentClass">Class</label>
             <select id="studentClass">
 
                 <option>Class 11 Commerce</option>
+
                 <option>Class 12 Commerce</option>
+
                 <option>B.Com</option>
+
                 <option>CA Foundation</option>
 
             </select>
 
-            <label class="sr-only" for="studentSubject">Subject</label>
             <select id="studentSubject">
 
                 <option>Accountancy</option>
+
                 <option>Business Studies</option>
+
                 <option>Applied Mathematics</option>
+
                 <option>Economics</option>
+
                 <option>Entrepreneurship</option>
 
             </select>
 
-            <label class="sr-only" for="studentMessage">Message (Optional)</label>
-            <textarea id="studentMessage" rows="4" placeholder="Message (Optional)"></textarea>
+            <textarea
 
-            <button type="submit" class="submit-demo-btn">Submit via WhatsApp</button>
+                id="studentMessage"
+
+                rows="4"
+
+                placeholder="Message (Optional)"
+
+            ></textarea>
+
+            <button
+
+                type="submit"
+
+                class="submit-demo-btn"
+
+            >
+
+                Submit via WhatsApp
+
+            </button>
 
         </form>
 
     </div>
 
-</div>
-
-<!-- =====================================================
-                VNSAT REGISTRATION MODAL
-===================================================== -->
-
-<div id="vnsatModal" class="demo-modal" role="dialog" aria-modal="true" aria-labelledby="vnsatModalTitle" aria-hidden="true">
+</div
+<div id="vnsatModal" class="demo-modal">
 
     <div class="demo-modal-content">
 
-        <span class="close-vnsat" role="button" tabindex="0" aria-label="Close dialog">&times;</span>
+        <span class="close-vnsat">&times;</span>
 
-        <h2 id="vnsatModalTitle">🏆 Register for VNSAT</h2>
+        <h2>🏆 Register for VNSAT</h2>
 
-        <p>Win scholarships of up to 80% based on your performance.</p>
+        <p>
+
+            Win scholarships of up to 80% based on your performance.
+
+        </p>
 
         <form id="vnsatForm">
 
-            <label class="sr-only" for="vnsatName">Student Name</label>
-            <input type="text" id="vnsatName" placeholder="Student Name" required>
+            <input
+                type="text"
+                id="vnsatName"
+                placeholder="Student Name"
+                required>
 
-            <label class="sr-only" for="vnsatPhone">Mobile Number</label>
-            <input type="tel" id="vnsatPhone" placeholder="Mobile Number" required>
+            <input
+                type="tel"
+                id="vnsatPhone"
+                placeholder="Mobile Number"
+                required>
 
-            <label class="sr-only" for="vnsatSchool">School Name</label>
-            <input type="text" id="vnsatSchool" placeholder="School Name">
+            <input
+                type="text"
+                id="vnsatSchool"
+                placeholder="School Name">
 
-            <label class="sr-only" for="vnsatClass">Class</label>
             <select id="vnsatClass">
 
                 <option>Class 10</option>
+
                 <option>Class 11</option>
+
                 <option>Class 12</option>
 
             </select>
 
-            <label class="sr-only" for="vnsatCourse">Program</label>
             <select id="vnsatCourse">
 
                 <option>Class 11 Commerce Package</option>
+
                 <option>Class 12 Commerce Package</option>
+
                 <option>Accountancy Specialization</option>
+
                 <option>Business Excellence Batch</option>
+
                 <option>Score Booster Course</option>
 
             </select>
 
-            <label class="sr-only" for="vnsatCity">City</label>
-            <input type="text" id="vnsatCity" placeholder="City">
+            <input
+                type="text"
+                id="vnsatCity"
+                placeholder="City">
 
-            <label class="sr-only" for="vnsatMessage">Message (Optional)</label>
-            <textarea id="vnsatMessage" rows="4" placeholder="Message (Optional)"></textarea>
+            <textarea
+                id="vnsatMessage"
+                rows="4"
+                placeholder="Message (Optional)"></textarea>
 
-            <button type="submit" class="submit-demo-btn">Register for VNSAT</button>
+            <button
+                type="submit"
+                class="submit-demo-btn">
+
+                Register for VNSAT
+
+            </button>
 
         </form>
 
     </div>
 
 </div>
+<div id="vnsatModal" class="demo-modal">
 
+    <div class="demo-modal-content">
+
+        <span class="close-vnsat">&times;</span>
+
+        <h2>🏆 Register for VNSAT</h2>
+
+        <p>
+
+            Win scholarships of up to 80% based on your performance.
+
+        </p>
+
+        <form id="vnsatForm">
+
+            <input
+                type="text"
+                id="vnsatName"
+                placeholder="Student Name"
+                required>
+
+            <input
+                type="tel"
+                id="vnsatPhone"
+                placeholder="Mobile Number"
+                required>
+
+            <input
+                type="text"
+                id="vnsatSchool"
+                placeholder="School Name">
+
+            <select id="vnsatClass">
+
+                <option>Class 10</option>
+
+                <option>Class 11</option>
+
+                <option>Class 12</option>
+
+            </select>
+
+            <select id="vnsatCourse">
+
+                <option>Class 11 Commerce Package</option>
+
+                <option>Class 12 Commerce Package</option>
+
+                <option>Accountancy Specialization</option>
+
+                <option>Business Excellence Batch</option>
+
+                <option>Score Booster Course</option>
+
+            </select>
+
+            <input
+                type="text"
+                id="vnsatCity"
+                placeholder="City">
+
+            <textarea
+                id="vnsatMessage"
+                rows="4"
+                placeholder="Message (Optional)"></textarea>
+
+            <button
+                type="submit"
+                class="submit-demo-btn">
+
+                Register for VNSAT
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+<a href="#" class="primary-btn open-demo">
+    Book Free Demo
+</a>
+<a href="#" class="primary-btn open-vnsat">
+    Register for VNSAT
+</a>
 <script src="script.js"></script>
-
 </body>
-
 </html>
+

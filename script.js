@@ -27,8 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const button = item.querySelector(".faq-question");
 
-        button.setAttribute("aria-expanded", item.classList.contains("active") ? "true" : "false");
-
         button.addEventListener("click", (e) => {
 
             // Close all other FAQs
@@ -39,21 +37,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     other.classList.remove("active");
 
-                    const otherButton = other.querySelector(".faq-question");
-
-                    if (otherButton) { otherButton.setAttribute("aria-expanded", "false"); }
-
                 }
 
             });
 
             // Toggle current FAQ
 
-            const isNowActive = !item.classList.contains("active");
-
             item.classList.toggle("active");
-
-            button.setAttribute("aria-expanded", isNowActive ? "true" : "false");
 
             /* ===============================
                     GOLD RIPPLE EFFECT
@@ -365,96 +355,6 @@ if (cursorGlow) {
                 FREE DEMO MODAL
 ===================================================== */
 
-/* =====================================================
-        ACCESSIBLE MODAL HELPERS (open/close/focus)
-===================================================== */
-
-document.querySelectorAll(".close-demo, .close-vnsat").forEach(closeEl => {
-
-    closeEl.addEventListener("keydown", function(e){
-
-        if(e.key === "Enter" || e.key === " "){
-
-            e.preventDefault();
-            closeEl.click();
-
-        }
-
-    });
-
-});
-
-let vnLastFocusedElement = null;
-
-function vnOpenModal(modal){
-
-    if(!modal) return;
-
-    vnLastFocusedElement = document.activeElement;
-
-    modal.style.display = "flex";
-    modal.setAttribute("aria-hidden", "false");
-
-    const focusable = modal.querySelector(
-        'input, select, textarea, button, [href], [tabindex]:not([tabindex="-1"])'
-    );
-
-    if(focusable){ focusable.focus(); }
-
-}
-
-function vnCloseModal(modal){
-
-    if(!modal) return;
-
-    modal.style.display = "none";
-    modal.setAttribute("aria-hidden", "true");
-
-    if(vnLastFocusedElement){ vnLastFocusedElement.focus(); }
-
-}
-
-/* Trap Tab focus and close on Escape for any open modal */
-document.addEventListener("keydown", function(e){
-
-    const openModal = document.querySelector('.demo-modal[aria-hidden="false"]');
-
-    if(!openModal) return;
-
-    if(e.key === "Escape"){
-
-        vnCloseModal(openModal);
-        return;
-
-    }
-
-    if(e.key === "Tab"){
-
-        const focusables = openModal.querySelectorAll(
-            'input, select, textarea, button, [href], [tabindex]:not([tabindex="-1"])'
-        );
-
-        if(focusables.length === 0) return;
-
-        const first = focusables[0];
-        const last = focusables[focusables.length - 1];
-
-        if(e.shiftKey && document.activeElement === first){
-
-            e.preventDefault();
-            last.focus();
-
-        } else if(!e.shiftKey && document.activeElement === last){
-
-            e.preventDefault();
-            first.focus();
-
-        }
-
-    }
-
-});
-
 const demoModal = document.getElementById("demoModal");
 
 const closeDemo = document.querySelector(".close-demo");
@@ -467,7 +367,7 @@ document.querySelectorAll(".open-demo").forEach(button => {
 
         e.preventDefault();
 
-        vnOpenModal(demoModal);
+        demoModal.style.display = "flex";
 
     });
 
@@ -479,7 +379,7 @@ if (closeDemo) {
 
     closeDemo.addEventListener("click", function(){
 
-        vnCloseModal(demoModal);
+        demoModal.style.display = "none";
 
     });
 
@@ -491,7 +391,7 @@ window.addEventListener("click", function(e){
 
     if(e.target === demoModal){
 
-        vnCloseModal(demoModal);
+        demoModal.style.display = "none";
 
     }
 
@@ -558,7 +458,7 @@ document.querySelectorAll(".open-vnsat").forEach(button => {
 
         e.preventDefault();
 
-        vnOpenModal(vnsatModal);
+        vnsatModal.style.display = "flex";
 
     });
 
@@ -568,7 +468,7 @@ if(closeVnsat){
 
     closeVnsat.addEventListener("click", function(){
 
-        vnCloseModal(vnsatModal);
+        vnsatModal.style.display = "none";
 
     });
 
@@ -578,7 +478,7 @@ window.addEventListener("click", function(e){
 
     if(e.target === vnsatModal){
 
-        vnCloseModal(vnsatModal);
+        vnsatModal.style.display = "none";
 
     }
 
@@ -594,11 +494,9 @@ if(menuToggle){
 
 menuToggle.onclick=function(){
 
-const isOpen = navLinks.classList.toggle("active");
+navLinks.classList.toggle("active");
 
 overlay.classList.toggle("active");
-
-menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
 
 }
 
@@ -612,24 +510,9 @@ navLinks.classList.remove("active");
 
 overlay.classList.remove("active");
 
-if(menuToggle){ menuToggle.setAttribute("aria-expanded","false"); }
-
 }
 
 }
-
-/* Close mobile menu with Escape key */
-document.addEventListener("keydown", function(e){
-
-    if(e.key === "Escape" && navLinks && navLinks.classList.contains("active")){
-
-        navLinks.classList.remove("active");
-        overlay.classList.remove("active");
-        if(menuToggle){ menuToggle.setAttribute("aria-expanded","false"); }
-
-    }
-
-});
 
 
 /* =====================================
@@ -667,49 +550,6 @@ topperCards.forEach(card=>{
 topperObserver.observe(card);
 
 });
-/* =====================================================
-        CONTACT PAGE FORM SUBMIT TO WHATSAPP
-===================================================== */
-
-const contactForm = document.getElementById("contactForm");
-
-if (contactForm) {
-
-    contactForm.addEventListener("submit", function (e) {
-
-        e.preventDefault();
-
-        const name = document.getElementById("contactName").value;
-        const phone = document.getElementById("contactPhone").value;
-        const email = document.getElementById("contactEmail").value;
-        const subject = document.getElementById("contactSubject").value;
-        const message = document.getElementById("contactMessage").value;
-
-        const text =
-`📩 *New Contact Enquiry*
-
-👤 Name: ${name}
-
-📱 Mobile: ${phone}
-
-✉️ Email: ${email}
-
-📝 Subject: ${subject}
-
-💬 Message:
-${message}`;
-
-        const whatsappURL =
-`https://wa.me/919171505292?text=${encodeURIComponent(text)}`;
-
-        window.open(whatsappURL, "_blank");
-
-        contactForm.reset();
-
-    });
-
-}
-
 /* =====================================================
             VNSAT FORM SUBMIT TO WHATSAPP
 ===================================================== */

@@ -25,6 +25,10 @@ content="https://vidhyanationacademy.com/courses.html">
 <meta property="og:image"
 content="https://vidhyanationacademy.com/assets/images/logo.png">
 
+
+    <!-- Other CSS files -->
+
+</head>
     <!-- Google Fonts -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,13 +51,10 @@ content="https://vidhyanationacademy.com/assets/images/logo.png">
 
     <link rel="stylesheet" href="contact-footer.css">
 
-    <!-- Other CSS files -->
-
 </head>
 
 <body>
 
-<a href="#main-content" class="skip-link">Skip to main content</a>
 <div class="mobile-overlay"></div>
 
 
@@ -76,9 +77,9 @@ content="https://vidhyanationacademy.com/assets/images/logo.png">
     </div>
 
 </a>
-        <nav aria-label="Main navigation">
+        <nav>
 
-            <ul class="nav-links" id="primary-navigation">
+            <ul class="nav-links">
 
                 <li>
 
@@ -93,7 +94,7 @@ content="https://vidhyanationacademy.com/assets/images/logo.png">
                 <li>
 
                     <a href="courses.html"
-                        class="active" aria-current="page">
+                        class="active">
 
                         Courses
 
@@ -145,13 +146,14 @@ content="https://vidhyanationacademy.com/assets/images/logo.png">
 
         </nav>
         <!-- Mobile Menu Button -->
-        <button type="button" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">
-            <i class="fas fa-bars" aria-hidden="true"></i>
-        </button>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+
+       
+
 
     </header>
-
-    <main id="main-content">
 
     <!-- =====================================================
                     COURSES HERO
@@ -818,94 +820,17 @@ content="https://vidhyanationacademy.com/assets/images/logo.png">
 
 </section>
 
-    </main>
-
-<!-- =====================================================
-                    PREMIUM FOOTER
-===================================================== -->
-
-<footer class="premium-footer">
-
-    <div class="footer-container">
-
-        <div class="footer-column">
-
-            <img src="assets/images/logo.png" alt="VidhyaNation Academy" class="footer-logo-img">
-
-            <h2 class="footer-logo">VidhyaNation Academy</h2>
-
-            <p>
-                Building Commerce Leaders through
-                Concept-Based Learning,
-                Personal Mentorship and
-                Academic Excellence.
-            </p>
-
-        </div>
-
-        <div class="footer-column">
-
-            <h3>Quick Links</h3>
-
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="faculty.html">Faculty</a></li>
-                <li><a href="results.html">Results</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-
-        </div>
-
-        <div class="footer-column">
-
-            <h3>Contact</h3>
-
-            <p><i class="fa-solid fa-phone" aria-hidden="true"></i> +91 91715 05292</p>
-            <p><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> +91 91715 05292</p>
-            <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Indore, Madhya Pradesh</p>
-            <p><i class="fa-regular fa-clock" aria-hidden="true"></i> Mon – Sat | 9:00 AM – 9:00 PM</p>
-
-        </div>
-
-        <div class="footer-column">
-
-            <h3>Follow Us</h3>
-
-            <div class="footer-socials">
-
-                <a href="https://youtube.com/@vidhyanationacademy?feature=shared" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
-                <a href="https://www.instagram.com/vidhyanationacademy?igsh=Znp0ZnF0OGV6NWVh" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-                <a href="https://play.google.com/store/apps/details?id=co.diy4.wjlge" target="_blank" rel="noopener" aria-label="Google Play"><i class="fa-brands fa-google-play" aria-hidden="true"></i></a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="footer-divider"></div>
-
-    <div class="footer-bottom">
-        © 2026 <strong>VidhyaNation Academy</strong> | All Rights Reserved
-        <br><br>
-        Designed with ❤️ for Future Commerce Leaders
-    </div>
-
-</footer>
-
 <!-- =====================================================
                 FREE DEMO MODAL
 ===================================================== -->
 
-<div id="demoModal" class="demo-modal" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle" aria-hidden="true">
+<div id="demoModal" class="demo-modal">
 
     <div class="demo-modal-content">
 
-        <span class="close-demo" role="button" tabindex="0" aria-label="Close dialog">&times;</span>
+        <span class="close-demo">&times;</span>
 
-        <h2 id="demoModalTitle">🎓 Book Your Free Demo Class</h2>
+        <h2>🎓 Book Your Free Demo Class</h2>
 
         <p>
             Fill in your details and our team will contact you shortly.
@@ -914,7 +839,6 @@ content="https://vidhyanationacademy.com/assets/images/logo.png">
         <form id="demoForm">
 
             <!-- Student Name -->
-            <label class="sr-only" for="studentName">Student Name</label>
             <input
                 type="text"
                 id="studentName"
@@ -923,7 +847,6 @@ content="https://vidhyanationacademy.com/assets/images/logo.png">
             >
 
             <!-- Mobile Number -->
-            <label class="sr-only" for="studentPhone">Mobile Number</label>
             <input
                 type="tel"
                 id="studentPhone"
@@ -932,7 +855,6 @@ content="https://vidhyanationacademy.com/assets/images/logo.png">
             >
 
             <!-- Class -->
-            <label class="sr-only" for="studentClass">Class</label>
             <select id="studentClass" required>
 
                 <option value="">Select Class</option>
@@ -948,7 +870,6 @@ content="https://vidhyanationacademy.com/assets/images/logo.png">
             </select>
 
             <!-- Subject -->
-            <label class="sr-only" for="studentSubject">Subject</label>
             <select id="studentSubject" required>
 
                 <option value="">Select Subject</option>
@@ -977,7 +898,6 @@ content="https://vidhyanationacademy.com/assets/images/logo.png">
 
             <!-- Message -->
 
-            <label class="sr-only" for="studentMessage">Additional Message (Optional)</label>
             <textarea
 
                 id="studentMessage"
@@ -1010,13 +930,13 @@ content="https://vidhyanationacademy.com/assets/images/logo.png">
                 VNSAT REGISTRATION MODAL
 ===================================================== -->
 
-<div id="vnsatModal" class="demo-modal" role="dialog" aria-modal="true" aria-labelledby="vnsatModalTitle" aria-hidden="true">
+<div id="vnsatModal" class="demo-modal">
 
     <div class="demo-modal-content">
 
-        <span class="close-vnsat" role="button" tabindex="0" aria-label="Close dialog">&times;</span>
+        <span class="close-vnsat">&times;</span>
 
-        <h2 id="vnsatModalTitle">🏆 Register for VNSAT</h2>
+        <h2>🏆 Register for VNSAT</h2>
 
         <p>
 
@@ -1026,27 +946,23 @@ content="https://vidhyanationacademy.com/assets/images/logo.png">
 
         <form id="vnsatForm">
 
-            <label class="sr-only" for="vnsatName">Student Name</label>
             <input
                 type="text"
                 id="vnsatName"
                 placeholder="Student Name"
                 required>
 
-            <label class="sr-only" for="vnsatPhone">Mobile Number</label>
             <input
                 type="tel"
                 id="vnsatPhone"
                 placeholder="Mobile Number"
                 required>
 
-            <label class="sr-only" for="vnsatSchool">School Name</label>
             <input
                 type="text"
                 id="vnsatSchool"
                 placeholder="School Name">
 
-            <label class="sr-only" for="vnsatClass">Class</label>
             <select id="vnsatClass">
 
                 <option>Class 10</option>
@@ -1057,7 +973,6 @@ content="https://vidhyanationacademy.com/assets/images/logo.png">
 
             </select>
 
-            <label class="sr-only" for="vnsatCourse">Program</label>
             <select id="vnsatCourse">
 
                 <option>Class 11 Commerce Package</option>
@@ -1072,13 +987,11 @@ content="https://vidhyanationacademy.com/assets/images/logo.png">
 
             </select>
 
-            <label class="sr-only" for="vnsatCity">City</label>
             <input
                 type="text"
                 id="vnsatCity"
                 placeholder="City">
 
-            <label class="sr-only" for="vnsatMessage">Message (Optional)</label>
             <textarea
                 id="vnsatMessage"
                 rows="4"
